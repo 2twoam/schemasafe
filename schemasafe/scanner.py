@@ -1,0 +1,1 @@
+import re; from .rules import RULES; scan = lambda sql: [(i + 1, r[0], r[1], r[3]) for i, line in enumerate(sql.splitlines()) if not line.strip().startswith("--") for r in RULES if re.search(r[2], line, re.I) and not (r[0] == "UPDATE_NO_WHERE" and re.search(r"\bWHERE\b", line, re.I))]
