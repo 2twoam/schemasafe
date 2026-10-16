@@ -1,0 +1,1 @@
+import sys; from .scanner import scan; main = lambda: (lambda f: (print("\n".join("line %d [%s] %s: %s" % (l, s.upper(), n, m) for l, n, s, m in f) or "No risky statements found."), sys.exit(1 if f else 0)))(scan(open(sys.argv[1], encoding="utf-8").read()))
