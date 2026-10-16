@@ -1,2 +1,1 @@
-# schemasafe
-Free, offline CLI that compares two PostgreSQL schema files, flags risky changes, and drafts rollback SQL.
+A free, offline command-line scanner that reads a PostgreSQL migration .sql file and flags risky statements (DROP TABLE, DROP COLUMN, TRUNCATE, DELETE or UPDATE without WHERE, blocking indexes, and more). It runs locally and sends no data anywhere. Usage: python -m schemasafe migration.sql (exit code 1 if anything is flagged). Note: this is a simple line-by-line regex scanner, not a full SQL parser, so it can miss multi-line statements. License: MIT.
